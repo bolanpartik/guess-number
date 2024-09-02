@@ -1,6 +1,6 @@
-export default function Button(){
+export default function Button({title,handleClick}){
 
     return(
-        <button>Button</button>
+        <button onClick={handleClick}>{title}</button>
     )
 }

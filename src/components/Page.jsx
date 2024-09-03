@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Button from "./Button";
 import Input from "./Input";
 import ShowResult from "./ShowResult";
@@ -8,6 +8,7 @@ export default function Page() {
     const [userNum, setUserNum] = useState('')
     const [message, setMessage] = useState('')
     const [showMessage, setShowMessage] = useState(false)
+    const guessRef = useRef(0)
 
     const genRandomNum = () => {
         return Math.floor(Math.random() * 100) + 1
@@ -28,7 +29,7 @@ export default function Page() {
             setShowMessage(true)
             return
         }
-        
+
         const num = parseInt(userNum)
 
         if (num > 0 && num <= 100) {

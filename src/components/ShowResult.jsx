@@ -1,7 +1,7 @@
 export default function ShowResult({ message }) {
 
     return (
-        <p>
+        <p className="mt-7 text-lg">
             {message}
         </p>
     )

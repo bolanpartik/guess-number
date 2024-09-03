@@ -6,6 +6,13 @@ export default function Page() {
 
     const [userNum, setUserNum] = useState('')
 
+
+    const genRandomNum = () => {
+        return Math.floor(Math.random() * 100) + 1
+    }
+
+    const [randomNum, setRandomNum] = useState(genRandomNum)
+
     const handleReset = () => {
         
     }

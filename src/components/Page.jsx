@@ -27,6 +27,24 @@ export default function Page() {
             setShowMessage(true)
             return
         }
+        
+        const num = parseInt(userNum)
+
+        if (num > 0 && num <= 100) {
+
+            if (num == randomNum) {
+                setMessage('You guessed it.')
+            } 
+            else if (num > randomNum) {
+                setMessage('Enter smaller number')
+            } 
+            else {
+                setMessage('Enter bigger number')
+            }
+        } else {
+            setMessage('Please enter a number between 1 to 10.')
+        }
+        setShowMessage(true)
 
     }
 

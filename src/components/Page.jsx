@@ -15,7 +15,9 @@ export default function Page() {
     const [randomNum, setRandomNum] = useState(genRandomNum)
 
     const handleReset = () => {
-        
+        setRandomNum(genRandomNum)
+        setUserNum('')
+        setShowMessage(false)
     }
 
     const handlecheckNumber = () => {

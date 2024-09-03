@@ -22,6 +22,12 @@ export default function Page() {
 
     const handlecheckNumber = () => {
 
+        if(!userNum || isNaN(userNum)){
+            setMessage("Please enter a vaild number.")
+            setShowMessage(true)
+            return
+        }
+
     }
 
     return (

@@ -20,6 +20,7 @@ export default function Page() {
         setRandomNum(genRandomNum)
         setUserNum('')
         setShowMessage(false)
+        guessRef.current = 0
     }
 
     const handlecheckNumber = () => {
@@ -33,9 +34,11 @@ export default function Page() {
         const num = parseInt(userNum)
 
         if (num > 0 && num <= 100) {
+            
+            guessRef.current +=1
 
             if (num == randomNum) {
-                setMessage('You guessed it.')
+                setMessage(`You guessed it in ${guessRef.current} guess.`)
             } 
             else if (num > randomNum) {
                 setMessage('Enter smaller number')

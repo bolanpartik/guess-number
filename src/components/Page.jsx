@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Button from "./Button";
 import Input from "./Input";
+import ShowResult from "./ShowResult";
 
 export default function Page() {
 
@@ -56,6 +57,7 @@ export default function Page() {
                 <Button title='Check' handleClick={handlecheckNumber} />
                 <Button title='Reset' handleClick={handleReset} />
             </div>
+            {showMessage && <ShowResult message={message} />}
         </div>
     )
 }

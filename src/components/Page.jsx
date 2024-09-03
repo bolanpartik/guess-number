@@ -5,7 +5,8 @@ import Input from "./Input";
 export default function Page() {
 
     const [userNum, setUserNum] = useState('')
-
+    const [message, setMessage] = useState('')
+    const [showMessage, setShowMessage] = useState(false)
 
     const genRandomNum = () => {
         return Math.floor(Math.random() * 100) + 1

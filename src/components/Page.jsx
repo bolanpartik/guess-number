@@ -47,7 +47,7 @@ export default function Page() {
                 setMessage('Enter bigger number')
             }
         } else {
-            setMessage('Please enter a number between 1 to 10.')
+            setMessage('Please enter a number between 1 to 100.')
         }
         setShowMessage(true)
 

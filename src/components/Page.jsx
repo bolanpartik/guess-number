@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Button from "./Button";
 import Input from "./Input";
 import ShowResult from "./ShowResult";
@@ -22,6 +22,15 @@ export default function Page() {
         setShowMessage(false)
         guessRef.current = 0
     }
+
+    useEffect(() => {
+        if (showMessage) {
+            const timer = setTimeout(() => {
+                setShowMessage(false)
+            }, 2000)
+            return () => clearTimeout(timer)
+        }
+    }, [showMessage])
 
     const handlecheckNumber = () => {
 

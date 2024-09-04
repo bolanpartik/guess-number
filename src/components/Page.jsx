@@ -64,8 +64,8 @@ export default function Page() {
     }
 
     return (
-        <div className="flex flex-col items-center mt-16 border-none rounded-xl w-1/3 bg-black/60 backdrop-blur-sm h-2/5 pb-4 text-yellow-400 shadow-md shadow-white/40">
-            <p className="text-4xl mt-4">Guess Number</p>
+        <div className="flex flex-col items-center mt-16 border-none rounded-xl w-3/4 sm:w-1/3 bg-black/60 backdrop-blur-sm h-2/5 min-h-60 pb-4 text-yellow-400 shadow-md shadow-white/40">
+            <p className="text-3xl mt-4">Guess Number</p>
             <Input userNum={userNum} setUserNum={setUserNum} />
             <div className="flex gap-7">
                 <Button title='Check' handleClick={handlecheckNumber} />

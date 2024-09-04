@@ -48,6 +48,7 @@ export default function Page() {
 
             if (num == randomNum) {
                 setMessage(`You guessed it in ${guessRef.current} guess.`)
+                handleReset()
             } 
             else if (num > randomNum) {
                 setMessage('Enter smaller number')
